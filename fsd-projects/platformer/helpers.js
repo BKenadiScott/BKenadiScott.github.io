@@ -388,26 +388,28 @@ function badPlatformCollision() {
 }
 
 function deathOfPlayer() {
-  ctx.fillStyle = "grey";
+  ctx.fillStyle = "red";
+  ctx.beginPath();
   ctx.fillRect(
     canvas.width / 4,
-    canvas.height / 6,
+    canvas.height / 4,
     canvas.width / 2,
     canvas.height / 2
+
   );
   ctx.fillStyle = "black";
-  ctx.font = "800% serif";
+  ctx.font = "arial";
   ctx.fillText(
-    "You are dead",
-    canvas.width / 4,
-    canvas.height / 6 + canvas.height / 5,
+    "You died...",
+    canvas.width / 2.6,
+    canvas.height / 6 + canvas.height / 3.5,
     (canvas.width / 16) * 14
   );
   ctx.font = "500% serif";
   ctx.fillText(
-    "Hit any key to restart",
-    canvas.width / 4,
-    canvas.height / 6 + canvas.height / 3,
+    "What a goober.",
+    canvas.width / 3,
+    canvas.height / 3.5 + canvas.height / 4,
     (canvas.width / 16) * 14
   );
   if (keyPress.any) {
